@@ -14,6 +14,8 @@
 #    GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
 #    \q
 
-# 4. Update your environment variables or configuration files to use the new database credentials. THE .env file and .env.local file
+# 4. Update your environment variables or configuration files to use the new database credentials. CREATE THE .env file and .env.local file 
+in .env add this line DATABASE_URL=postgresql://your_user:your_password@localhost:5432/model_approval
+in .env.local NEXTAUTH_SECRET=
 
 # Add any additional commands or notes below as needed. 
