@@ -1,0 +1,19 @@
+# Instructions to set up your own Postgres database
+
+# 1. Install Postgres if you haven't already
+#    (e.g., brew install postgresql on macOS)
+
+# 2. Start the Postgres service
+#    (e.g., brew services start postgresql)
+
+# 3. Create a new database and user (replace placeholders as needed):
+#
+#    psql postgres
+#    CREATE DATABASE model_approval;
+#    CREATE USER your_username WITH ENCRYPTED PASSWORD 'your_password';
+#    GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
+#    \q
+
+# 4. Update your environment variables or configuration files to use the new database credentials. THE .env file and .env.local file
+
+# Add any additional commands or notes below as needed. 

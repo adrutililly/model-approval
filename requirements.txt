@@ -1,0 +1,5 @@
+# This project uses Node.js dependencies managed by pnpm (see package.json)
+# No Python requirements by default.
+npm install -g pnpm      # if you don't have pnpm
+pnpm install
+pnpm dev

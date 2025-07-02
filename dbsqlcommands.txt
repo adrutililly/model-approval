@@ -1,0 +1,54 @@
+SQL cmds:
+
+1.	CREATE DATABASE model_approval;
+
+2.	\c model_approval #CONNECT TO THE DATABASE
+
+3. CREATE TABLE newmodel_request (
+    id SERIAL PRIMARY KEY,
+    model_name VARCHAR(255),
+    category VARCHAR(50),
+    infra VARCHAR(100),
+    license VARCHAR(100),
+    legal_status VARCHAR(50),
+    cyber_status VARCHAR(50),
+    procurement_status VARCHAR(50),
+    created_at TIMESTAMP,
+    version VARCHAR(20),
+    comments TEXT
+);
+
+4. CREATE TABLE user_info (
+    id INT,
+    emp_id VARCHAR(20),
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email_id VARCHAR(100),
+    updated_at TIMESTAMP,
+    legal VARCHAR(50),
+    cyber VARCHAR(50),
+    procurement VARCHAR(50),
+    comments TEXT
+);
+
+
+ 
+
+#DUMMY DATA
+3. INSERT INTO newmodel_request (id, model_name, category, infra, license, legal_status, cyber_status, procurement_status, created_at, version, comments)
+VALUES
+(3, 'Claude 3 Opus', 'multimodal', 'amazon bedrock', 'Anthropic', 'yellow', 'yellow', 'red', '2025-06-16 18:16:05.953091', '3', 'Accepted'),
+(5, 'LLaMA 3', 'text', 'aws', 'Meta', 'green', 'orange', 'orange', '2025-06-16 18:16:05.953091', '3', 'Accepted'),
+(4, 'Mistral-7B', 'text', 'on-prem/cloud', 'Mistral', 'orange', 'red', 'rejected', '2025-06-16 18:16:05.953091', '7B', 'rejected due to procurement status'),
+(6, 'Gemini Pro', 'multimodal', 'cloud', 'Google', 'in review', 'yellow', 'yellow', '2025-06-16 18:16:05.953091', 'Pro', 'Accepted'),
+(2, 'gpt-4 (Azure OpenAI)', 'text', 'azure', 'OpenAI', 'green', 'in review', 'depreciated', '2025-06-16 18:16:05.953091', '4', 'depreciated'),
+(22, 'gpt-5', 'na', 'na', 'na', 'submitted', 'submitted', 'submitted', '2025-06-23 18:27:05.029259', '0.0.1', ''),
+(23, 'gpt-6', 'na', 'na', 'na', 'submitted', 'green', 'submitted', '2025-06-23 18:28:01.210828', 'na', 'approved'),
+(1, 'gpt-4o (OpenAI API)', 'multimodal', 'cloud', 'OpenAI', 'green', 'yellow', 'orange', '2025-06-16 18:16:05.953091', '4.0', 'Accepted'),
+(21, 'got-5', 'text', 'azure', 'OpenAI', 'submitted', 'in review', 'green', '2025-06-19 18:45:29.922548', '0.01', 'Accepted');
+
+
+
+
+
+
